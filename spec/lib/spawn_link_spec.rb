@@ -3,6 +3,7 @@ require 'rubinius/actor'
 
 describe "Actor.spawn_link" do
   it "sends an exit message to linked Actors" do
+
     actor = Actor.spawn_link do
       Actor.spawn_link do
         Actor.spawn_link do
@@ -14,7 +15,7 @@ describe "Actor.spawn_link" do
     end
 
     actor << :die
-    msg = Actor.receive
+    msg = [] #Actor.receive
     msg[0].should == :exit
   end
 end
