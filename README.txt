@@ -16,7 +16,7 @@ Usage
 =====
 
 require 'rubinius/actor'
-include Rubinius::Actor
+include Rubinius
 this_io = STDOUT
 actor = Actor.spawn{loop{
   Actor.receive{|m|
