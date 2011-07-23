@@ -28,6 +28,14 @@ actor = Actor.spawn{loop{
 }
 actor << this_io
 
+Testing
+=======
+
+Rubinius-Actor is tested with RSpec.  Install rspec and from the project root,
+run:
+
+rspec spec/
+
 Contribution
 ============
 
