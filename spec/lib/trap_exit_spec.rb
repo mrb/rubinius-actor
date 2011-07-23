@@ -1,5 +1,5 @@
 require File.expand_path('../../spec_helper', __FILE__)
-require 'actor'
+require 'rubinius/actor'
 
 describe "Actor#trap_exit" do
   it "accesses the trap_exit flag for the current actor" do
