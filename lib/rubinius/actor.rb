@@ -380,6 +380,16 @@ module Rubinius
       self
     end
 
+    # Get a list of Actors linked to this Actor
+    def links
+      @lock.receive
+      begin
+        @links.dup
+      ensure
+        @lock << nil
+      end
+    end
+
     def watchdog
       reason = nil
       begin
