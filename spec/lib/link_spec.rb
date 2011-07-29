@@ -21,7 +21,7 @@ describe "Actor.link" do
     end
 
     msgs = []
-    msgs << Actor.receive
+    #msgs << Actor.receive
     msgs << chan.receive
 
     msgs[0][0].should == :exit
